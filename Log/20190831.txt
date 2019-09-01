@@ -1,0 +1,4 @@
+>> Task completed:
+	1. train face model
+
+	2. face recognition
