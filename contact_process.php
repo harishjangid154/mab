@@ -1,5 +1,5 @@
 <?php
-
+/*
     $to = "rockybd1995@gmail.com";
     $from = $_POST['email'];
     $name = $_POST['name'];
@@ -33,5 +33,25 @@
 	$body .= "</body></html>";
 
     $send = mail($to, $subject, $body, $headers);
+	*/
+	$name = $_POST["name"];
+	$email = $_POST["email"];
+	
+$servername = "localhost";
+$username = "id10955321_harish";
+$password = "harish";
+$dbname = "id10955321_team";
+
+$conn = new mysqli($servername, $username, $password,$dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+	echo "Error while connecting to database";
+}
+
+
+$sql = "INSERT INTO newteam (name,email)
+VALUES ('$name','$email')";
+
 
 ?>
