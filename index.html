@@ -187,13 +187,19 @@
             <div class="container">
                 <div class="row get_touch_inner">
                     <div class="col-lg-6">
-                        <form name='contact' method='POST' netlify ><input type='hidden' name='form-name' value='contact' />
-									  <label>Your Name: <input type="text" name="name" /></label>   
-									  <label>Your Email: <input type="email" name="email" /></label>
-									  <label>Message: <br><textarea name="message"></textarea></label>
-									
-									<br>
-									  <button type="submit">Send</button>
+                        <form class="contact_us_form row" name="contact" data-netlify="true" id="contactForm" novalidate="novalidate">
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                           
+							
+                            <div class="form-group col-lg-12">
+                                <button type="submit" value="submit" class="btn submit_btn form-control">Send</button>
+                            </div>
+                        </form>
                     </div>
                     <div class="col-lg-6">
                         <div class="touch_details">
@@ -238,7 +244,7 @@
                                     <form name="newsletter" netlify>
                                         <input type="text" class="form-control" placeholder="Your e-mail address here" aria-label="Your e-mail address here">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-secondary submit_btn" type="submit">Subscribe</button>
+                                            <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
                                         </span>
                                     </form>
                                 </div>
